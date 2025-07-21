@@ -32,28 +32,31 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Bagian Hero */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20 md:py-32 flex items-center justify-center overflow-hidden">
-        {/* Latar belakang gambar dengan overlay */}
+      {/* Bagian Hero yang Diperbarui */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden text-white">
+        {/* Latar belakang gambar dengan overlay gradien */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Pendidikan Terapan"
+            src="https://images.unsplash.com/photo-1604384041761-71d680147eb7?q=80&w=1185&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Gambar baru dari Pexels
+            alt="Pemandangan Alam dan Pertanian"
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
             priority
-            onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/1920x1080/0A2342/FFFFFF?text=Latar+Belakang+Pendidikan"; }}
+            onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/1920x1080/0A2342/FFFFFF?text=Latar+Belakang+Hero"; }}
           />
+          {/* Overlay gradien untuk kontras teks */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-700 to-green-700 opacity-75"></div> {/* Gradien disesuaikan ke ungu-hijau */}
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-            Mencetak Generasi Unggul Melalui Pendidikan Terapan
+
+        <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down drop-shadow-lg">
+            Mencetak Generasi Unggul & Berdaya
           </h1>
-          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
-            Perusahaan XYZ adalah ekosistem pendidikan terapan berbasis praktik nyata yang mengintegrasikan pelatihan keterampilan, literasi keuangan mikro, dan teknologi digital dalam skema pemberdayaan komunitas.
+          <p className="text-lg md:text-xl mb-10 opacity-90 animate-fade-in-up drop-shadow-md">
+            XYZ adalah Perusahaan ekosistem pendidikan terapan berbasis praktik nyata yang mengintegrasikan pelatihan keterampilan, literasi keuangan mikro, dan teknologi digital dalam skema pemberdayaan komunitas. Bersama XYZ, ubah potensi menjadi prestasi nyata.
           </p>
-          <Link href="/services" className="inline-block bg-white text-blue-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition-all duration-300 transform hover:scale-105 animate-bounce-in">
-            Pelajari Layanan Kami
+          <Link href="/services" className="inline-block bg-white text-purple-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-100 transition-all duration-300 transform hover:scale-105 animate-bounce-in"> {/* Warna tombol CTA disesuaikan */}
+            Jelajahi Layanan Kami
           </Link>
         </div>
       </section>
@@ -257,7 +260,7 @@ export default function HomePage() {
       </section>
 
       {/* Bagian CTA Akhir */}
-      <section className="bg-gradient-to-r from-blue-700 to-blue-800 text-white py-16 text-center  shadow-xl">
+      <section className="bg-gradient-to-r from-blue-700 to-blue-800 text-white py-16 text-center shadow-xl">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Siap Bergabung dengan Ekosistem Kami?

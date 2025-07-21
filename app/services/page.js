@@ -5,6 +5,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head'; // Untuk metadata spesifik halaman
+import { FaFly, FaRecycle, FaBug, FaLeaf, FaIndustry,FaCanadianMapleLeaf, FaHandshake, FaMoneyBillWave, FaSeedling } from 'react-icons/fa'; // FaBug dan FaSeedling sudah diimpor
+
 
 export default function ServicesPage() {
   return (
@@ -38,14 +40,41 @@ export default function ServicesPage() {
                 alt="Budidaya Maggot"
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
-                onError={(e) => { e.target.onerror = null; }}
+                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/800x600/3B82F6/FFFFFF?text=Budidaya+Maggot"; }}
               />
             </div>
             <div>
-              <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-3">
-                <li>Fokus pada budidaya <span className="font-semibold text-blue-700">Black Soldier Fly (BSF)</span>.</li>
-                <li>Menggunakan limbah dapur rumah tangga sebagai media budidaya.</li>
-                <li>Menghasilkan produk berupa maggot segar dan kering yang kaya protein untuk pakan unggas dan ikan.</li>
+              <ul className="space-y-6"> {/* Menambah space-y untuk jarak antar poin */}
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaFly /> {/* Ikon untuk BSF */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Fokus pada budidaya <span className="text-blue-700">Black Soldier Fly (BSF)</span>.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaRecycle /> {/* Ikon untuk limbah dapur */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Menggunakan limbah dapur rumah tangga sebagai media budidaya.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaMoneyBillWave /> {/* Ikon untuk produk kaya protein */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Menghasilkan produk berupa maggot segar dan kering yang kaya protein untuk pakan unggas dan ikan.
+                    </p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -58,10 +87,37 @@ export default function ServicesPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-3">
-                <li>Mengembangkan budidaya cacing untuk menghasilkan biomassa cacing sebagai pakan ternak.</li>
-                <li>Memanfaatkan limbah organik sebagai pakan cacing.</li>
-                <li>Produk sampingan berupa <span className="font-semibold text-blue-700">kascing (bekas cacing)</span> yang dapat dijual sebagai pupuk organik berkualitas tinggi.</li>
+              <ul className="space-y-6"> {/* Menambah space-y untuk jarak antar poin */}
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaBug /> {/* Ikon untuk budidaya cacing (menggantikan FaWorm) */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Mengembangkan budidaya cacing untuk menghasilkan biomassa cacing sebagai pakan ternak.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaRecycle /> {/* Ikon untuk limbah organik */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Memanfaatkan limbah organik sebagai pakan cacing.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaSeedling /> {/* Ikon untuk pupuk organik */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Produk sampingan berupa <span className="text-blue-700">kascing (bekas cacing)</span> yang dapat dijual sebagai pupuk organik berkualitas tinggi.
+                    </p>
+                  </div>
+                </li>
               </ul>
             </div>
             <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-md">
@@ -70,7 +126,7 @@ export default function ServicesPage() {
                 alt="Budidaya Cacing"
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
-                onError={(e) => { e.target.onerror = null; }}
+                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/800x600/3B82F6/FFFFFF?text=Budidaya+Cacing"; }}
               />
             </div>
           </div>
@@ -88,14 +144,41 @@ export default function ServicesPage() {
                 alt="Budidaya Ulat Sutra"
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
-                onError={(e) => { e.target.onerror = null; }}
+                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/800x600/3B82F6/FFFFFF?text=Budidaya+Ulat+Sutra"; }}
               />
             </div>
             <div>
-              <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-3">
-                <li>Budidaya ulat sutra jenis <span className="font-semibold text-blue-700">Samia ricini</span> yang pakannya adalah daun singkong.</li>
-                <li>Panen kokon ulat sutra yang dapat diolah menjadi kerajinan atau sumber protein alternatif untuk pakan ternak.</li>
-                <li>Limbah daun dari sisa pakan ulat dapat diolah menjadi kompos.</li>
+              <ul className="space-y-6"> {/* Menambah space-y untuk jarak antar poin */}
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaCanadianMapleLeaf /> {/* Ikon untuk ulat sutra */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Budidaya ulat sutra jenis <span className="text-blue-700">Samia ricini</span> yang pakannya adalah daun singkong.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaIndustry /> {/* Ikon untuk kokon/kerajinan */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Panen kokon ulat sutra yang dapat diolah menjadi kerajinan atau sumber protein alternatif untuk pakan ternak.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaLeaf /> {/* Ikon untuk kompos */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Limbah daun dari sisa pakan ulat dapat diolah menjadi kompos.
+                    </p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>

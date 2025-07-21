@@ -4,6 +4,9 @@
 import React from 'react';
 import Image from 'next/image'; // Menggunakan next/image untuk optimasi gambar
 import Head from 'next/head'; // Menggunakan Head untuk metadata spesifik halaman
+import { FaEye, FaLightbulb, FaHandsHelping, FaSeedling } from 'react-icons/fa'; // Contoh ikon untuk misi
+import { GiGrowth } from 'react-icons/gi'; // Contoh ikon untuk visi (jika diperlukan)
+import { MdOutlineWork, MdOutlineHomeWork, MdOutlineIntegrationInstructions, MdOutlineMonetizationOn } from 'react-icons/md'; // Ikon tambahan
 
 export default function AboutPage() {
   return (
@@ -43,28 +46,73 @@ export default function AboutPage() {
                 alt="Latar Belakang Perusahaan XYZ"
                 fill
                 className="object-cover transition-transform duration-300 hover:scale-105"
-                onError={(e) => { e.target.onerror = null;}}
+                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/800x600/2563EB/FFFFFF?text=Latar+Belakang+XYZ"; }}
               />
             </div>
           </div>
         </section>
 
-        {/* Bagian Visi & Misi (dapat digabungkan atau dipisah) */}
+        {/* Bagian Visi & Misi yang Diperbarui */}
         <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-12 text-center">
+            Visi & Misi Kami
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-blue-600">
+            {/* Visi */}
+            <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-blue-600 flex flex-col items-center text-center">
+              <div className="text-blue-600 text-6xl mb-6">
+                <FaEye /> {/* Ikon untuk Visi */}
+              </div>
               <h3 className="text-3xl font-bold text-blue-800 mb-4">Visi</h3>
               <p className="text-gray-700 leading-relaxed text-lg">
                 Menjadi ekosistem pendidikan terapan terdepan yang memberdayakan masyarakat untuk menciptakan kemandirian ekonomi dan keberlanjutan lingkungan.
               </p>
             </div>
+
+            {/* Misi */}
             <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-blue-600">
-              <h3 className="text-3xl font-bold text-blue-800 mb-4">Misi</h3>
-              <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
-                <li>Mencetak generasi yang cerdas, unggul keterampilan, dan siap kerja.</li>
-                <li>Mendorong penciptaan lapangan kerja dari rumah.</li>
-                <li>Mengintegrasikan pelatihan, literasi keuangan, dan teknologi digital.</li>
-                <li>Mengembangkan solusi inovatif seperti Integrated Eco Farming.</li>
+              <h3 className="text-3xl font-bold text-blue-800 mb-6 text-center">Misi</h3>
+              <ul className="space-y-6"> {/* Menambah space-y untuk jarak antar misi */}
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <MdOutlineWork /> {/* Ikon untuk misi 1 */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Mencetak generasi yang tidak hanya cerdas, tetapi juga unggul secara keterampilan dan siap kerja.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <MdOutlineHomeWork /> {/* Ikon untuk misi 2 */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Mendorong penciptaan lapangan kerja dari rumah.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <MdOutlineIntegrationInstructions /> {/* Ikon untuk misi 3 */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Mengintegrasikan pelatihan, literasi keuangan, dan teknologi digital.
+                    </p>
+                  </div >
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 text-blue-600 text-3xl mr-4 mt-1">
+                    <FaSeedling /> {/* Ikon untuk misi 4 */}
+                  </div>
+                  <div>
+                    <p className="text-gray-700 leading-relaxed text-lg font-semibold">
+                      Mengembangkan solusi inovatif seperti Integrated Eco Farming.
+                    </p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
